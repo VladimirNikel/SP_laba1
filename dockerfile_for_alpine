@@ -1,0 +1,7 @@
+FROM alpine
+
+RUN apk update && apk add bash && apk add git && apk add genisoimage
+
+WORKDIR /home/app/
+
+RUN pwd && ls && cd /home/ && git clone https://github.com/VladimirNikel/SP_laba1.git && pwd && ls
